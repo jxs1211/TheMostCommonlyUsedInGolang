@@ -38,14 +38,14 @@ Slice contains element
 
 2.检查给定的时间是否处于某一时间区间内。
 
-```
+```go
 func main() {
   currentTime := time.Now()
   // Time after 18 hours of currentTime
   futureTime := time.Now().Add(time.Hour * 18)
   // Time after 10 hours of currentTime
   intermediateTime := time.Now().Add(time.Hour * 10)
-  if intermediateTime.After(currentTime) &&    intermediateTime.Before(futureTime) {
+  if intermediateTime.After(currentTime) && intermediateTime.Before(futureTime) {
     fmt.Println("intermediateTime is between currentTime and  futureTime")
   } else {
     fmt.Println("intermediateTime is not inbetween currentTime and futureTime")
@@ -60,7 +60,7 @@ intermediateTime is between currentTime and futureTime
 
 3.计算特定时区的当前时间戳。
 
-```
+```go
 import (
  "time"
  "fmt"
@@ -87,7 +87,7 @@ currentTime :  2022-02-09 13:14:33.986953939 +0800 CST
 
 如果将较小的整数除以较大的整数，则结果为 0，可以使用下面的方案保留小数。
 
-```
+```go
 import "fmt"
 
 func main() {
@@ -108,7 +108,7 @@ result : 0.2
 
 通过下面的方案可以删除切片中重复项。
 
-```
+```go
 import "fmt"
 
 func main() {
@@ -144,7 +144,7 @@ Array after removing duplicates :  [Mango Grapes Kiwi Apple]
 
 Go 语言没有相关的内置函数，可以通过下面代码实现。
 
-```
+```go
 import "fmt"
 
 func main() {
@@ -174,7 +174,7 @@ Shuffled array :  [UK India Canada US]
 
 可以通过下面函数来反转切片。
 
-```
+```go
 import "fmt"
 
 
@@ -199,9 +199,8 @@ Reverted array :  [6 5 4 3 2 1]
 
 8.元素求和
 
-```
+```go
 import "fmt"
-
 
 func main() {
   s := []int{10, 20, 30}
@@ -227,13 +226,12 @@ Sum of slice elements :  60
 
 9.将 slice 转换为逗号分隔的字符串
 
-```
+```go
 import (
    "fmt"
    "strings"
    "strconv"
 )
-
 
 func main() {
    result := ConvertSliceToString([]int{10, 20, 30, 40})
@@ -265,7 +263,6 @@ import (
   "regexp"
 )
 
-
 func main() {
    snakeCase := ConvertToSnakeCase("ILikeProgrammingINGo123")
    fmt.Println("String in snake case : ", snakeCase)
@@ -280,12 +277,9 @@ func ConvertToSnakeCase(input string) string {
   return strings.ToLower(snake)
 }
 
-
 output:
 String in snake case :  i_like_programming_in_go123
 ```
-
-
 
 via: https://blog.canopas.com/golang-utility-functions-you-always-missed-ebeabae6b276 >
 

@@ -66,7 +66,7 @@ PASS
 
 这时候我们需要在代码中添加 `goleak.VerifyNone` 方法，如下：
 
-```
+```go
 import (
  "testing"
  "go.uber.org/goleak"
